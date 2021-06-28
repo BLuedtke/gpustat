@@ -30,14 +30,14 @@ Options:
 * `-e`, `--show-codec` : Display encoder and/or decoder utilization
 * `-P`, `--show-power` : Display GPU power usage and/or limit (`draw` or `draw,limit`)
 * `-a`, `--show-all`   : Display all gpu properties above
-* `--watch`, `-i`, `--interval`   : Run in watch mode (equivalent to `watch gpustat`) if given. Denotes interval between updates. ([#41][gh-issue-41])
-* `--json`             : JSON Output (Experimental, [#10][gh-issue-10])
+* `--watch`, `-i`, `--interval`   : Run in watch mode (equivalent to `watch gpustat`) if given. Denotes interval between updates.
+* `--json`             : JSON Output
 
 ### Tips
 
-- To periodically watch, try `gpustat --watch` or `gpustat -i` ([#41][gh-issue-41]).
+- To periodically watch, try `gpustat --watch` or `gpustat -i`.
     - For older versions, one may use `watch --color -n1.0 gpustat --color`.
-- Running `nvidia-smi daemon` (root privilege required) will make the query much **faster** and use less CPU ([#54][gh-issue-54]).
+- Running `nvidia-smi daemon` (root privilege required) will make the query much **faster** and use less CPU.
 - The GPU ID (index) shown by `gpustat` (and `nvidia-smi`) is PCI BUS ID,
   while CUDA differently assigns the fastest GPU with the lowest ID by default.
   Therefore, in order to make CUDA and `gpustat` use **same GPU index**,
@@ -58,14 +58,15 @@ pip install git+https://github.com/BLuedtke/gpustat.git@master
 Default display
 ---------------
 
-> [0] GeForce GTX Titan X | 77'C,  96 % | 11848 / 12287 MB | python/52046(11821M)
+> [0] GeForce RTX 3070 | 42°C,  4 % | 772 / 7959 MB |
+> : .... (processes)
 
 - `[0]`: GPUindex (starts from 0) as PCI_BUS_ID
-- `GeForce GTX Titan X`: GPU name
-- `77'C`: Temperature
-- `96 %`: Utilization
-- `11848 / 12287 MB`: GPU Memory Usage
-- `python/...`: Running processes on GPU (and their memory usage)
+- `GeForce RTX 3070`: GPU name
+- `42°C`: Temperature
+- `4 %`: Utilization
+- `772 / 7959 MB`: GPU Memory Usage
+- `...`: Running processes on GPU (and their memory usage) -> Not final.
 
 Changelog
 ---------
