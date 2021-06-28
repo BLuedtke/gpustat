@@ -282,7 +282,7 @@ class GPUStat(object):
             r += os.linesep
             r += ' - '
             if show_user:
-                r += "{CUser:{gpuname_width}}{}{C0}".format(_repr(p['username'], '--'), **colors)
+                r += "{CUser:16}{}{C0}".format(_repr(p['username'], '--'), **colors)
             if show_cmd:
                 if r:
                     r += ':'
