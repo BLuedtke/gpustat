@@ -214,7 +214,7 @@ class GPUStat(object):
         colors['CMemT'] = term.yellow
         colors['CMemP'] = term.yellow
         colors['CCPUMemU'] = term.yellow
-        colors['CUser'] = term.bold_black   # gray
+        colors['CUser'] = term.bold_gray   # gray
         colors['CUtil'] = _conditional(lambda: self.utilization < 30,
                                        term.green, term.bold_green)
         colors['CUtilEnc'] = _conditional(
@@ -281,22 +281,15 @@ class GPUStat(object):
             r = ''
             r += os.linesep
             r += ' - '
-            if not show_cmd or show_user:
-                r += "{CUser}{}{C0}".format(
-                    _repr(p['username'], '--'), **colors
-                )
+            if show_user:
+                r += "{CUser}{}{C0}".format(_repr(p['username'], '--'), **colors)
             if show_cmd:
                 if r:
                     r += ':'
-                r += "{C1}{}{C0}".format(
-                    _repr(p.get('command', p['pid']), '--'), **colors
-                )
-
+                r += "{C1}{}{C0}".format(_repr(p.get('command', p['pid']), '--'), **colors)
             if show_pid:
                 r += ("/%s" % _repr(p['pid'], '--'))
-            r += '({CMemP}{}M{C0})'.format(
-                _repr(p['gpu_memory_usage'], '?'), **colors
-            )
+            r += '({CMemP}{}M{C0})'.format(_repr(p['gpu_memory_usage'], '?'), **colors)
             return r
 
         def full_process_info(p):
