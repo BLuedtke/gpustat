@@ -49,29 +49,11 @@ Options:
 Quick Installation
 ------------------
 
-Install from [PyPI][pypi_gpustat]:
-
-```
-pip install gpustat
-```
-
-If you don't have root privilege, please try to install on user namespace: `pip install --user gpustat`.
-
 To install the latest version (master branch) via pip:
 
 ```
-pip install git+https://github.com/wookayin/gpustat.git@master
+pip install git+https://github.com/BLuedtke/gpustat.git@master
 ```
-
-Note that starting from v1.0, gpustat will support [only Python 3.4+][gh-issue-66].
-For older versions (python 2.7, <3.4), you can continue using gpustat v0.x.
-
-
-[pypi_gpustat]: https://pypi.python.org/pypi/gpustat
-[gh-issue-10]: https://github.com/wookayin/gpustat/issues/10
-[gh-issue-41]: https://github.com/wookayin/gpustat/issues/41
-[gh-issue-54]: https://github.com/wookayin/gpustat/issues/54
-[gh-issue-66]: https://github.com/wookayin/gpustat/issues/66
 
 Default display
 ---------------
