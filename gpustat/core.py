@@ -285,7 +285,7 @@ class GPUStat(object):
                 r += "{:<12}{C0}".format(_repr(p['username'], '--'), **colors)
             if show_cmd:
                 if show_user:
-                    r += ':'
+                    r += ': '
                 r += "{:<14}{C0}".format(_repr(p.get('command', p['pid']), '--'), **colors)
             if show_pid:
                 r += ("/%s" % _repr(p['pid'], '--'))
