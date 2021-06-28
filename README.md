@@ -1,8 +1,6 @@
 `gpustat`
 =========
 
-[![pypi](https://img.shields.io/pypi/v/gpustat.svg?maxAge=86400)][pypi_gpustat]
-[![Build Status](https://travis-ci.org/wookayin/gpustat.svg?branch=master)](https://travis-ci.org/wookayin/gpustat)
 [![license](https://img.shields.io/github/license/wookayin/gpustat.svg?maxAge=86400)](LICENSE)
 
 Just *less* than nvidia-smi?
@@ -11,7 +9,9 @@ Just *less* than nvidia-smi?
 
 NOTE: This works with NVIDIA Graphics Devices only, no AMD support as of now. Contributions are welcome!
 
-FORKED (by BLuedtke, 2021-06-28). Objective: Remove the processes/at least add line breaks by default.
+FORKED (by BLuedtke, 2021-06-28).
+Added line breaks for each process.
+
 
 Usage
 -----
