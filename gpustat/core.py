@@ -295,6 +295,7 @@ class GPUStat(object):
             r += '({CMemP}{}M{C0})'.format(
                 _repr(p['gpu_memory_usage'], '?'), **colors
             )
+            r += os.linesep
             return r
 
         def full_process_info(p):
