@@ -279,6 +279,8 @@ class GPUStat(object):
 
         def process_repr(p):
             r = ''
+            r += os.linesep
+            r += ' - '
             if not show_cmd or show_user:
                 r += "{CUser}{}{C0}".format(
                     _repr(p['username'], '--'), **colors
@@ -295,7 +297,6 @@ class GPUStat(object):
             r += '({CMemP}{}M{C0})'.format(
                 _repr(p['gpu_memory_usage'], '?'), **colors
             )
-            r += os.linesep
             return r
 
         def full_process_info(p):
