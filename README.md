@@ -58,8 +58,8 @@ pip install git+https://github.com/BLuedtke/gpustat.git@master
 Default display
 ---------------
 
-> [0] GeForce RTX 3070 | 42°C,  4 % | 772 / 7959 MB |
-> : .... (processes)
+> [0] GeForce RTX 3070 | 42°C,  4 % | 772 / 7959 MB |    
+> - (memory used by process)
 
 - `[0]`: GPUindex (starts from 0) as PCI_BUS_ID
 - `GeForce RTX 3070`: GPU name
