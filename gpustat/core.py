@@ -282,14 +282,14 @@ class GPUStat(object):
             r += os.linesep
             r += ' - '
             if show_user:
-                r += "{CUser}{}{C0}".format(_repr(p['username'], '--'), **colors)
+                r += "{CUser:{gpuname_width}}{}{C0}".format(_repr(p['username'], '--'), **colors)
             if show_cmd:
                 if r:
                     r += ':'
                 r += "{C1}{}{C0}".format(_repr(p.get('command', p['pid']), '--'), **colors)
             if show_pid:
                 r += ("/%s" % _repr(p['pid'], '--'))
-            r += '\t({CMemP}{}M{C0})'.format(_repr(p['gpu_memory_usage'], '?'), **colors)
+            r += '({CMemP}{}M{C0})'.format(_repr(p['gpu_memory_usage'], '?'), **colors)
             return r
 
         def full_process_info(p):
